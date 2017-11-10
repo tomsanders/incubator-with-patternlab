@@ -1,0 +1,6 @@
+{
+  "clean": "remove compiled code",
+  "compile": "compile code to do anything with it",
+  "help": "show this help",
+  "serve": "for development and testing"
+}

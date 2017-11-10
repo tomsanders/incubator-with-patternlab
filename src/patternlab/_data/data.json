@@ -1,0 +1,91 @@
+{
+  "pageTitle" : "Incubator - patternlab",
+  "htmlClass": "",
+  "bodyClass": "body",
+
+  "swatches": [
+    {
+      "title": "main colors",
+      "colors": [
+        {
+          "name": "@col-yellow",
+          "code": "#e9ac00"
+        },
+        {
+          "name": "@col-green",
+          "code": "#6ec425"
+        },
+        {
+          "name": "@col-blue",
+          "code": "#436bef"
+        },
+        {
+          "name": "@col-orange",
+          "code": "#edaa00"
+        }
+      ]
+    },
+    {
+      "title": "greytones",
+      "colors": [
+        {
+          "name": "@col-grey-light",
+          "code": "#F5F5F5"
+        },
+        {
+          "name": "@col-grey",
+          "code": "#DDDDDD"
+        },
+        {
+          "name": "@col-grey-dark",
+          "code": "#333333"
+        },
+        {
+          "name": "@col-black",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "title": "Category colors",
+      "colors": [
+        {
+          "name": "@col-cat-aarde",
+          "code": "#15c7e3"
+        },
+        {
+          "name": "@col-cat-cultuur",
+          "code": "#ec2e5d"
+        },
+        {
+          "name": "@col-cat-dieren_en_planten",
+          "code": "#65c0ad"
+        },
+        {
+          "name": "@col-cat-eten_en_drinken",
+          "code": "#ff8333"
+        },
+        {
+          "name": "@col-cat-geschiedenis",
+          "code": "#dbb479"
+        },
+        {
+          "name": "@col-sport",
+          "code": "#5e8cd1"
+        },
+        {
+          "name": "@col-menselijk_lichaam",
+          "code": "#df5857"
+        },
+        {
+          "name": "@col-maatschappij",
+          "code": "#8c6ed8"
+        },
+        {
+          "name": "@col-wetenschap_en_techniek",
+          "code": "#a4c3e5"
+        }
+      ]
+    }
+  ]
+}

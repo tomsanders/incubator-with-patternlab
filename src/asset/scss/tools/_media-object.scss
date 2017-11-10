@@ -1,0 +1,30 @@
+
+// Generic media object
+
+//The Media Object pattern is: image thingy on the left, heading and text on the right.
+//That's what Nicole Sullivan called it and the name stuck. It's a pretty simple pattern,
+// but like all things web design, it can be done many ways.
+//
+// https://css-tricks.com/media-object-bunch-ways/
+
+@mixin media-object {
+    display: table;
+    background: white;
+    padding: 1rem;
+
+    > img {
+        display: table-cell;
+    }
+    > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 1rem;
+        text-align: left;
+        width:100%;
+    }
+}
+
+// to use the mebia-object in the html
+.media-object {
+    @include media-object;
+}

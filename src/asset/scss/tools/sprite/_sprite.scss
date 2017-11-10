@@ -1,0 +1,413 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-11-name: 'icon-11';
+$icon-11-x: 0px;
+$icon-11-y: 0px;
+$icon-11-offset-x: 0px;
+$icon-11-offset-y: 0px;
+$icon-11-width: 200px;
+$icon-11-height: 200px;
+$icon-11-total-width: 200px;
+$icon-11-total-height: 200px;
+$icon-11-image: '../images/sprites/sprite-groceries.jpg';
+$icon-11: (0px, 0px, 0px, 0px, 200px, 200px, 200px, 200px, '../images/sprites/sprite-groceries.jpg', 'icon-11', );
+$sprite-groceries-width: 200px;
+$sprite-groceries-height: 200px;
+$sprite-groceries-image: '../images/sprites/sprite-groceries.jpg';
+$sprite-groceries-sprites: ($icon-11, );
+$sprite-groceries: (200px, 200px, '../images/sprites/sprite-groceries.jpg', $sprite-groceries-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-beste-product-2015-2016-name: 'icon-beste-product-2015-2016';
+$icon-beste-product-2015-2016-x: 234px;
+$icon-beste-product-2015-2016-y: 0px;
+$icon-beste-product-2015-2016-offset-x: -234px;
+$icon-beste-product-2015-2016-offset-y: 0px;
+$icon-beste-product-2015-2016-width: 60px;
+$icon-beste-product-2015-2016-height: 75px;
+$icon-beste-product-2015-2016-total-width: 294px;
+$icon-beste-product-2015-2016-total-height: 229px;
+$icon-beste-product-2015-2016-image: '../images/sprites/sprite-quality.png';
+$icon-beste-product-2015-2016: (234px, 0px, -234px, 0px, 60px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-beste-product-2015-2016', );
+$icon-beste-product-2017-name: 'icon-beste-product-2017';
+$icon-beste-product-2017-x: 234px;
+$icon-beste-product-2017-y: 77px;
+$icon-beste-product-2017-offset-x: -234px;
+$icon-beste-product-2017-offset-y: -77px;
+$icon-beste-product-2017-width: 60px;
+$icon-beste-product-2017-height: 75px;
+$icon-beste-product-2017-total-width: 294px;
+$icon-beste-product-2017-total-height: 229px;
+$icon-beste-product-2017-image: '../images/sprites/sprite-quality.png';
+$icon-beste-product-2017: (234px, 77px, -234px, -77px, 60px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-beste-product-2017', );
+$icon-beter-leven-1-name: 'icon-beter-leven-1';
+$icon-beter-leven-1-x: 0px;
+$icon-beter-leven-1-y: 77px;
+$icon-beter-leven-1-offset-x: 0px;
+$icon-beter-leven-1-offset-y: -77px;
+$icon-beter-leven-1-width: 110px;
+$icon-beter-leven-1-height: 75px;
+$icon-beter-leven-1-total-width: 294px;
+$icon-beter-leven-1-total-height: 229px;
+$icon-beter-leven-1-image: '../images/sprites/sprite-quality.png';
+$icon-beter-leven-1: (0px, 77px, 0px, -77px, 110px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-beter-leven-1', );
+$icon-beter-leven-2-name: 'icon-beter-leven-2';
+$icon-beter-leven-2-x: 112px;
+$icon-beter-leven-2-y: 77px;
+$icon-beter-leven-2-offset-x: -112px;
+$icon-beter-leven-2-offset-y: -77px;
+$icon-beter-leven-2-width: 110px;
+$icon-beter-leven-2-height: 75px;
+$icon-beter-leven-2-total-width: 294px;
+$icon-beter-leven-2-total-height: 229px;
+$icon-beter-leven-2-image: '../images/sprites/sprite-quality.png';
+$icon-beter-leven-2: (112px, 77px, -112px, -77px, 110px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-beter-leven-2', );
+$icon-beter-leven-3-name: 'icon-beter-leven-3';
+$icon-beter-leven-3-x: 0px;
+$icon-beter-leven-3-y: 154px;
+$icon-beter-leven-3-offset-x: 0px;
+$icon-beter-leven-3-offset-y: -154px;
+$icon-beter-leven-3-width: 110px;
+$icon-beter-leven-3-height: 75px;
+$icon-beter-leven-3-total-width: 294px;
+$icon-beter-leven-3-total-height: 229px;
+$icon-beter-leven-3-image: '../images/sprites/sprite-quality.png';
+$icon-beter-leven-3: (0px, 154px, 0px, -154px, 110px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-beter-leven-3', );
+$icon-msc-name: 'icon-msc';
+$icon-msc-x: 0px;
+$icon-msc-y: 0px;
+$icon-msc-offset-x: 0px;
+$icon-msc-offset-y: 0px;
+$icon-msc-width: 115px;
+$icon-msc-height: 75px;
+$icon-msc-total-width: 294px;
+$icon-msc-total-height: 229px;
+$icon-msc-image: '../images/sprites/sprite-quality.png';
+$icon-msc: (0px, 0px, 0px, 0px, 115px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-msc', );
+$icon-vriesvers-name: 'icon-vriesvers';
+$icon-vriesvers-x: 117px;
+$icon-vriesvers-y: 0px;
+$icon-vriesvers-offset-x: -117px;
+$icon-vriesvers-offset-y: 0px;
+$icon-vriesvers-width: 115px;
+$icon-vriesvers-height: 75px;
+$icon-vriesvers-total-width: 294px;
+$icon-vriesvers-total-height: 229px;
+$icon-vriesvers-image: '../images/sprites/sprite-quality.png';
+$icon-vriesvers: (117px, 0px, -117px, 0px, 115px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-vriesvers', );
+$icon-weidemelk-name: 'icon-weidemelk';
+$icon-weidemelk-x: 112px;
+$icon-weidemelk-y: 154px;
+$icon-weidemelk-offset-x: -112px;
+$icon-weidemelk-offset-y: -154px;
+$icon-weidemelk-width: 75px;
+$icon-weidemelk-height: 75px;
+$icon-weidemelk-total-width: 294px;
+$icon-weidemelk-total-height: 229px;
+$icon-weidemelk-image: '../images/sprites/sprite-quality.png';
+$icon-weidemelk: (112px, 154px, -112px, -154px, 75px, 75px, 294px, 229px, '../images/sprites/sprite-quality.png', 'icon-weidemelk', );
+$icon-beste-product-2015-2016-2x-name: 'icon-beste-product-2015-2016@2x';
+$icon-beste-product-2015-2016-2x-x: 468px;
+$icon-beste-product-2015-2016-2x-y: 0px;
+$icon-beste-product-2015-2016-2x-offset-x: -468px;
+$icon-beste-product-2015-2016-2x-offset-y: 0px;
+$icon-beste-product-2015-2016-2x-width: 120px;
+$icon-beste-product-2015-2016-2x-height: 150px;
+$icon-beste-product-2015-2016-2x-total-width: 588px;
+$icon-beste-product-2015-2016-2x-total-height: 458px;
+$icon-beste-product-2015-2016-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-beste-product-2015-2016-2x: (468px, 0px, -468px, 0px, 120px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-beste-product-2015-2016@2x', );
+$icon-beste-product-2017-2x-name: 'icon-beste-product-2017@2x';
+$icon-beste-product-2017-2x-x: 468px;
+$icon-beste-product-2017-2x-y: 154px;
+$icon-beste-product-2017-2x-offset-x: -468px;
+$icon-beste-product-2017-2x-offset-y: -154px;
+$icon-beste-product-2017-2x-width: 120px;
+$icon-beste-product-2017-2x-height: 150px;
+$icon-beste-product-2017-2x-total-width: 588px;
+$icon-beste-product-2017-2x-total-height: 458px;
+$icon-beste-product-2017-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-beste-product-2017-2x: (468px, 154px, -468px, -154px, 120px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-beste-product-2017@2x', );
+$icon-beter-leven-1-2x-name: 'icon-beter-leven-1@2x';
+$icon-beter-leven-1-2x-x: 0px;
+$icon-beter-leven-1-2x-y: 154px;
+$icon-beter-leven-1-2x-offset-x: 0px;
+$icon-beter-leven-1-2x-offset-y: -154px;
+$icon-beter-leven-1-2x-width: 220px;
+$icon-beter-leven-1-2x-height: 150px;
+$icon-beter-leven-1-2x-total-width: 588px;
+$icon-beter-leven-1-2x-total-height: 458px;
+$icon-beter-leven-1-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-beter-leven-1-2x: (0px, 154px, 0px, -154px, 220px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-beter-leven-1@2x', );
+$icon-beter-leven-2-2x-name: 'icon-beter-leven-2@2x';
+$icon-beter-leven-2-2x-x: 224px;
+$icon-beter-leven-2-2x-y: 154px;
+$icon-beter-leven-2-2x-offset-x: -224px;
+$icon-beter-leven-2-2x-offset-y: -154px;
+$icon-beter-leven-2-2x-width: 220px;
+$icon-beter-leven-2-2x-height: 150px;
+$icon-beter-leven-2-2x-total-width: 588px;
+$icon-beter-leven-2-2x-total-height: 458px;
+$icon-beter-leven-2-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-beter-leven-2-2x: (224px, 154px, -224px, -154px, 220px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-beter-leven-2@2x', );
+$icon-beter-leven-3-2x-name: 'icon-beter-leven-3@2x';
+$icon-beter-leven-3-2x-x: 0px;
+$icon-beter-leven-3-2x-y: 308px;
+$icon-beter-leven-3-2x-offset-x: 0px;
+$icon-beter-leven-3-2x-offset-y: -308px;
+$icon-beter-leven-3-2x-width: 220px;
+$icon-beter-leven-3-2x-height: 150px;
+$icon-beter-leven-3-2x-total-width: 588px;
+$icon-beter-leven-3-2x-total-height: 458px;
+$icon-beter-leven-3-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-beter-leven-3-2x: (0px, 308px, 0px, -308px, 220px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-beter-leven-3@2x', );
+$icon-msc-2x-name: 'icon-msc@2x';
+$icon-msc-2x-x: 0px;
+$icon-msc-2x-y: 0px;
+$icon-msc-2x-offset-x: 0px;
+$icon-msc-2x-offset-y: 0px;
+$icon-msc-2x-width: 230px;
+$icon-msc-2x-height: 150px;
+$icon-msc-2x-total-width: 588px;
+$icon-msc-2x-total-height: 458px;
+$icon-msc-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-msc-2x: (0px, 0px, 0px, 0px, 230px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-msc@2x', );
+$icon-vriesvers-2x-name: 'icon-vriesvers@2x';
+$icon-vriesvers-2x-x: 234px;
+$icon-vriesvers-2x-y: 0px;
+$icon-vriesvers-2x-offset-x: -234px;
+$icon-vriesvers-2x-offset-y: 0px;
+$icon-vriesvers-2x-width: 230px;
+$icon-vriesvers-2x-height: 150px;
+$icon-vriesvers-2x-total-width: 588px;
+$icon-vriesvers-2x-total-height: 458px;
+$icon-vriesvers-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-vriesvers-2x: (234px, 0px, -234px, 0px, 230px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-vriesvers@2x', );
+$icon-weidemelk-2x-name: 'icon-weidemelk@2x';
+$icon-weidemelk-2x-x: 224px;
+$icon-weidemelk-2x-y: 308px;
+$icon-weidemelk-2x-offset-x: -224px;
+$icon-weidemelk-2x-offset-y: -308px;
+$icon-weidemelk-2x-width: 150px;
+$icon-weidemelk-2x-height: 150px;
+$icon-weidemelk-2x-total-width: 588px;
+$icon-weidemelk-2x-total-height: 458px;
+$icon-weidemelk-2x-image: '../images/sprites/sprite-quality@2x.png';
+$icon-weidemelk-2x: (224px, 308px, -224px, -308px, 150px, 150px, 588px, 458px, '../images/sprites/sprite-quality@2x.png', 'icon-weidemelk@2x', );
+$sprite-quality-width: 294px;
+$sprite-quality-height: 229px;
+$sprite-quality-image: '../images/sprites/sprite-quality.png';
+$sprite-quality-sprites: ($icon-beste-product-2015-2016, $icon-beste-product-2017, $icon-beter-leven-1, $icon-beter-leven-2, $icon-beter-leven-3, $icon-msc, $icon-vriesvers, $icon-weidemelk, );
+$sprite-quality: (294px, 229px, '../images/sprites/sprite-quality.png', $sprite-quality-sprites, );
+$retina-spritesheet-width: 588px;
+$retina-spritesheet-height: 458px;
+$retina-spritesheet-image: '../images/sprites/sprite-quality@2x.png';
+$retina-spritesheet-sprites: ($icon-beste-product-2015-2016-2x, $icon-beste-product-2017-2x, $icon-beter-leven-1-2x, $icon-beter-leven-2-2x, $icon-beter-leven-3-2x, $icon-msc-2x, $icon-vriesvers-2x, $icon-weidemelk-2x, );
+$retina-spritesheet: (588px, 458px, '../images/sprites/sprite-quality@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon-beste-product-2015-2016-group-name: 'icon-beste-product-2015-2016';
+$icon-beste-product-2015-2016-group: ('icon-beste-product-2015-2016', $icon-beste-product-2015-2016, $icon-beste-product-2015-2016-2x, );
+$icon-beste-product-2017-group-name: 'icon-beste-product-2017';
+$icon-beste-product-2017-group: ('icon-beste-product-2017', $icon-beste-product-2017, $icon-beste-product-2017-2x, );
+$icon-beter-leven-1-group-name: 'icon-beter-leven-1';
+$icon-beter-leven-1-group: ('icon-beter-leven-1', $icon-beter-leven-1, $icon-beter-leven-1-2x, );
+$icon-beter-leven-2-group-name: 'icon-beter-leven-2';
+$icon-beter-leven-2-group: ('icon-beter-leven-2', $icon-beter-leven-2, $icon-beter-leven-2-2x, );
+$icon-beter-leven-3-group-name: 'icon-beter-leven-3';
+$icon-beter-leven-3-group: ('icon-beter-leven-3', $icon-beter-leven-3, $icon-beter-leven-3-2x, );
+$icon-msc-group-name: 'icon-msc';
+$icon-msc-group: ('icon-msc', $icon-msc, $icon-msc-2x, );
+$icon-vriesvers-group-name: 'icon-vriesvers';
+$icon-vriesvers-group: ('icon-vriesvers', $icon-vriesvers, $icon-vriesvers-2x, );
+$icon-weidemelk-group-name: 'icon-weidemelk';
+$icon-weidemelk-group: ('icon-weidemelk', $icon-weidemelk, $icon-weidemelk-2x, );
+$retina-groups: ($icon-beste-product-2015-2016-group, $icon-beste-product-2017-group, $icon-beter-leven-1-group, $icon-beter-leven-2-group, $icon-beter-leven-3-group, $icon-msc-group, $icon-vriesvers-group, $icon-weidemelk-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

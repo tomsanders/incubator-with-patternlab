@@ -1,0 +1,37 @@
+//************************************************************************//
+//  Responsive utitlie items to toggle visibility
+//
+//************************************************************************//
+//
+
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+// current implementation
+// b0_hide b3_show
+
+@media (min-width:320px) and (max-width: 479px) {
+    .hidden-b1 { //.hidden-xs
+        display: none !important;
+    }
+}
+@media (min-width:480px) and (max-width: 767px) {
+    .hidden-b2 { //.hidden-sm
+        display: none !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hidden-b3 { //.hidden-md
+        display: none !important;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .hidden-b4 { //.hidden-lg
+        display: none !important;
+    }
+}
+@media (min-width: 1280px) {
+    .hidden-b5 { //.hidden-xl
+        display: none !important;
+    }
+}

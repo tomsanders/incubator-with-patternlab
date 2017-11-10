@@ -1,0 +1,40 @@
+//************************************************************************//
+//  Responsive Mixin based on CastleCSS' bp (breakpoints)
+//  See http://www.castlecss.com/grid.html#breakpoints for CastleCSS' bp
+//  Mixin is from https://github.com/lukasborawski/bigos/blob/v-0.3/src/_mixins.scss
+//  For usage, see aforementioned github page.
+//************************************************************************//
+
+@mixin breakpoint($point, $direction: false) {
+    @if type-of($point) == number and not unitless($point) and $direction == false {
+        @media // Custom
+        only screen and (max-width: #{$point})
+        {
+            @content;
+        }
+    }
+    @if not $direction == false and $direction == 'from-to' {
+        $from : nth($point, 1);
+        $to   : nth($point, 2);
+        @media all // Custom
+        and (max-width: #{$to})
+        and (min-width: #{$from})
+        {
+            @content;
+        }
+    }
+    @if type-of($point) == number and not unitless($point) and not $direction == false and $direction == 'to' {
+        @media // Custom
+        only screen and (max-width: #{$point})
+        {
+            @content;
+        }
+    }
+    @if type-of($point) == number and not unitless($point) and not $direction == false and $direction == 'from' {
+        @media // Custom
+        only screen and (min-width: #{$point})
+        {
+            @content;
+        }
+    }
+}

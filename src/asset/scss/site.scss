@@ -1,0 +1,29 @@
+////
+/// Main style sheet to import all others
+
+
+//
+// Import all variables trought there specific main files
+//
+
+
+// Import our own Variables files
+@import "variables";
+
+
+// Vendor specific setting
+@import "vendor/__vendor";
+
+//import tools
+@import "tools/__tools";
+
+// Elements
+@import "elements/__elements";
+
+// Objecten
+@import "objects/__objects";
+
+
+// Import all components
+@import "components/__components";
+

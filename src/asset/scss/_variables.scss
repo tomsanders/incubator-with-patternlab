@@ -1,0 +1,64 @@
+//
+// Variables
+// --------------------------------------------------
+//
+
+//
+//## Primary colors
+
+$color-brand-black:             #000000;       // Black
+$color-brand-white:             #ffffff;       // White
+$color-brand-orange:            #f79300;       // Tangerine
+$color-brand-red :              #E30613;       // Venetian red
+$color-brand-green:             #9CBE14;       // Citrus
+$color-brand-green-dark:        #177c50;       // Salem
+
+//## Gray and brand colors for use across Bootstrap.
+$gray-base:                     #A9A5A2 !default;
+$gray:                          #D8D8D8 !default;
+$gray-light:                    #F3EFEB !default;
+$gray-lighter:                  #C5C2BF !default;
+
+
+/* Primary brand color */
+$brand-primary:         $color-brand-orange !default;
+$brand-success:         $color-brand-green !default;
+//$brand-info:          $color-brand-blue !default;
+//$brand-warning:         $color-brand-yellow !default;
+$brand-danger:          $color-brand-red !default;
+
+
+//** Global text color on `<body>`.
+$text-color:            #333333 !default;    // #333
+$text-color-white:      #ffffff !default;      // #FFF
+
+
+//== Typography
+//
+//
+//** Fonts
+
+$font-text: sans-serif;
+
+// needed for patternlab
+.font-primary {     font-family: sans-serif  }
+.font-secondary {   font-family: sans-serif;  }
+.font-tertiary {    font-family: sans-serif;  }
+.font-text {        font-family: sans-serif }
+
+// breakpoint helpers
+//@media only screen and ( max-width: $b6 ) {  // desktop 1024 - 1200
+//    border:1px solid black;
+//}
+//@media only screen and ( max-width: $b5 ) {  // desktop 769 - 1024
+//    border:1px solid red;
+//}
+//@media only screen and ( max-width: $b4 ) {  // desktop 769 - 1024
+//    border:1px solid yellow;
+//}
+//@media only screen and ( max-width: $b3 ) {  // tablet 481 - 768
+//    border:1px solid green;
+//}
+//@media only screen and ( max-width: $b2 ) {  // mobile 320 - 480
+//    border:1px solid purple;
+//}

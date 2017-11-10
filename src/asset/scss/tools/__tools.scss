@@ -1,0 +1,19 @@
+// Incentro development tools
+
+// only import the sprite file
+@import "responsive-mixin";
+@import "sprite/sprite.scss";
+@import "high-dpi-media";
+@import "responsive-utilities";
+@import "media-object";
+@import "object-fit";
+
+// include the image sprite variables
+@include sprites($sprite-quality-sprites)
+@include sprites($sprite-groceries-sprites)
+@include retina-sprites($retina-groups);
+
+// prevent hover underline overflow with icons
+[class^="rev"][class^="icon-"]:after, [class*="rev"][class*=" icon-"]:after {
+    text-decoration: none !important;
+}

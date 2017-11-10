@@ -1,0 +1,95 @@
+{
+  "path": {
+    "src": {
+      "root": "src",
+      "asset": {
+        "image": {
+          "root": "src/asset/images",
+          "imageSprites": {
+            "spriteGroceries": "src/asset/images/sprites/boodschappen",
+            "spriteQualitymarks": "src/asset/images/sprites/keurmerken"
+          }
+        },
+        "font": "src/asset/font/**/*",
+        "svg": {
+          "base":"src/asset/images/svg/**/*",
+          "css": "src/asset/images/svg/iconfont.css"
+        },
+        "javascript": {
+          "root": "src/asset/javascript",
+          "modules": "src/asset/javascript/modules",
+          "libraries": "src/asset/javascript/libs/librariesindex.js",
+          "libraryFile": "src/asset/javascript/libs.min.js",
+          "scripts": "src/asset/javascript/scriptsindex.js",
+          "scriptsFile": "src/asset/javascript/scripts.min.js",
+          "footerScripts": "src/asset/javascript/scripts.js",
+          "noParse": {
+              "map": ""
+            }
+        },
+        "scss": "src/asset/scss",
+        "cssSprite": "src/asset/scss/tools/sprite",
+        "scssSpriteTemplate": "src/asset/scss/tools/sprite/_sprite-scss-template.scss"
+      },
+      "prototype": {
+        "template": "src/prototype/template",
+        "webroot": "src/prototype/webroot"
+      }
+    },
+    "build": {
+      "root": "build",
+      "asset": {
+        "javascript": "build/asset/javascript",
+        "image": {
+          "root": "build/asset/images",
+          "imageSprites": {
+            "spriteOutput": "build/asset/images/sprites"
+            }
+          },
+        "font": "build/asset/font",
+        "svgsrc": "src/asset/font",
+        "svg": "build/asset/font/iconfont",
+        "css": "build/asset/css"
+      },
+      "prototype": {
+        "webroot": "build/prototype"
+      },
+      "patternLibrary": {
+        "root": "build/pattern_library"
+      },
+      "site": "build/prototype"
+    },
+    "buildUrl": {
+      "site": "/",
+      "css": "/css",
+      "javascript": "/asset/javascript",
+      "image": "/asset/images",
+      "font": "/asset/font"
+    }
+  },
+  "preferences": {
+    "autoprefix": {
+      "support": "last 2 versions, Explorer >= 8, Firefox >= 25"
+    },
+    "es2015": [
+      "es2015",
+      {
+        "loose": false
+      }
+    ]
+  },
+  "sass": {
+    "precision": 8,
+    "includePaths": [
+      "./node_modules/bootstrap-sass/assets/stylesheets/"
+    ]
+  },
+  "javascript": {
+    "paths": [
+      "./node_modules/bootstrap-sass/assets/javascripts/"
+    ],
+    "noParse": [
+
+    ]
+  }
+}

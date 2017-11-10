@@ -1,0 +1,14 @@
+.icon {
+    &--subnav {
+        display: inline-block;
+        overflow: hidden;
+        transform: scale(0.301) translateZ(0);
+        transition: all 0.25s;
+        position: absolute;
+        left: -66px;
+        top: -66px;
+        will-change: transform;
+        -webkit-font-smoothing: subpixel-antialiased;
+        image-rendering: -webkit-optimize-contrast; // used for Chrome optimisation
+    }
+}
